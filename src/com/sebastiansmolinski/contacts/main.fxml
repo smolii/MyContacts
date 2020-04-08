@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="mainPanel" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sebastiansmolinski.contacts.Controller">
+    <top>
+        <VBox>
+            <MenuBar prefHeight="25.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                <menus>
+                    <Menu text="File">
+                        <MenuItem mnemonicParsing="false" onAction="#handleExit" text="Exit" />
+                    </Menu>
+                    <Menu text="Contacts">
+                        <MenuItem mnemonicParsing="false" onAction="#addContact" text="Add" />
+                        <MenuItem fx:id="editContact" disable="true" onAction="#editContact" text="Edit" />
+                        <MenuItem fx:id="deleteContact" disable="true" onAction="#deleteContact" text="Delete" />
+                    </Menu>
+                </menus>
+            </MenuBar>
+            <ToolBar>
+                <HBox>
+                    <Button onAction="#addContact">
+                        <tooltip>
+                            <Tooltip text="Add a new Contact" />
+                        </tooltip>
+                        <graphic>
+                            <ImageView>
+                                <Image url="@/toolbarButtonGraphics/general/New16.gif" />
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                    <Button fx:id="editButton" disable="true" onAction="#editContact">
+                        <tooltip>
+                            <Tooltip text="Edit Contact" />
+                        </tooltip>
+                        <graphic>
+                            <ImageView>
+                                <Image url="@/toolbarButtonGraphics/general/Edit16.gif" />
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                    <Button fx:id="deleteButton" disable="true" onAction="#deleteContact">
+                        <tooltip>
+                            <Tooltip text="Delete Contact" />
+                        </tooltip>
+                        <graphic>
+                            <ImageView>
+                                <Image url="@/toolbarButtonGraphics/general/Delete16.gif" />
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                    <ComboBox fx:id="choiceTheme" onAction="#handleThemeClick">
+                        <tooltip>
+                            <Tooltip text="Theme" />
+                        </tooltip>
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value="black" />
+                                <String fx:value="white" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
+                </HBox>
+            </ToolBar>
+        </VBox>
+
+    </top>
+    <left>
+        <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" tabMinHeight="5.0" tabMinWidth="150.0" BorderPane.alignment="CENTER">
+            <tabs>
+                <Tab text="Contact List">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TableView id="contactsTable" fx:id="contactsTableView" layoutX="5.0" maxWidth="260.0" minWidth="194.0" onMouseClicked="#handleTableViewMouseClick" prefHeight="353.0" prefWidth="195.0">
+                                    <columns>
+                                        <TableColumn prefWidth="100.0" text="First Name">
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="firstName" />
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                        <TableColumn prefWidth="100.0" text="Last Name">
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="lastName" />
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                    </columns>
+                                    <columnResizePolicy>
+                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                    </columnResizePolicy>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </left>
+    <right>
+        <TabPane prefHeight="375.0" prefWidth="400.0" tabClosingPolicy="UNAVAILABLE" tabMinHeight="5.0" tabMinWidth="150.0" BorderPane.alignment="CENTER">
+            <tabs>
+                <Tab text="Details">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="339.0" prefWidth="400.0">
+                            <children>
+                                <Label layoutX="20.0" layoutY="14.0" text="General" />
+                                <Label layoutX="5.0" layoutY="44.0" text="Title:" />
+                                <TextField fx:id="titleField" layoutX="62.0" layoutY="40.0" prefHeight="25.0" prefWidth="130.0" />
+                                <Label layoutX="5.0" layoutY="72.0" text="Name:" />
+                                <TextField fx:id="nameField" layoutX="62.0" layoutY="70.0" prefHeight="25.0" prefWidth="130.0" />
+                                <Label layoutX="5.0" layoutY="101.0" text="Company:" />
+                                <TextField fx:id="companyNameField" layoutX="62.0" layoutY="100.0" prefHeight="25.0" prefWidth="130.0" />
+                                <Label layoutX="5.0" layoutY="135.0" text="Job Title:" />
+                                <TextField fx:id="jobTitleField" layoutX="62.0" layoutY="130.0" prefHeight="25.0" prefWidth="130.0" />
+                                <Label layoutX="20.0" layoutY="173.0" text="Busines Phones:" />
+                                <Label layoutX="5.0" layoutY="199.0" text="Phone:" />
+                                <TextField fx:id="phoneNumberField" layoutX="55.0" layoutY="195.0" prefWidth="330.0" />
+                                <Label layoutX="5.0" layoutY="227.0" text="Mobile:" />
+                                <TextField fx:id="mobileNumberField" layoutX="55.0" layoutY="223.0" prefHeight="25.0" prefWidth="330.0" />
+                                <Label layoutX="20.0" layoutY="257.0" text="Business Internet:" />
+                                <Label layoutX="5.0" layoutY="286.0" text="E-Mail:" />
+                                <TextField fx:id="mailField" layoutX="55.0" layoutY="282.0" prefHeight="25.0" prefWidth="330.0" />
+                                <Label layoutX="5.0" layoutY="315.0" text="Web Site:" />
+                                <TextField fx:id="webSiteField" layoutX="55.0" layoutY="311.0" prefHeight="25.0" prefWidth="330.0" />
+                                <ImageView fx:id="chooseImage" fitHeight="150.0" fitWidth="200.0" layoutX="211.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </right>
+    <center>
+        <Separator orientation="VERTICAL" prefHeight="200.0" BorderPane.alignment="CENTER" />
+    </center>
+    <padding>
+        <Insets bottom="10.0" right="5.0" />
+    </padding>
+</BorderPane>

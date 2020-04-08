@@ -1,0 +1,45 @@
+.root {
+    -fx-base: rgb(50, 50, 50);
+    -fx-background: rgb(50, 50, 50);
+    -fx-control-inner-background:  rgb(50, 50, 50);
+}
+
+.tool-bar .separator:vertical .line {
+    -fx-border-style: solid;
+    -fx-background-color: null;
+    -fx-border-color:  transparent transparent derive(-fx-base,-35%) derive(-fx-base,+15%);
+}
+
+.tool-bar .separator:horizontal .line {
+    -fx-border-style: solid;
+    -fx-background-color: null;
+    -fx-border-color:  transparent transparent derive(-fx-base,+15%) transparent;
+}
+
+.tooltip {
+    -fx-background-color:-fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+}
+
+.button {
+    -fx-background-color: transparent;
+    -fx-padding: 4;
+}
+
+.button:hover {
+    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-color: -fx-hover-base;
+}
+
+.table-view {
+    -fx-table-cell-border-color:derive(-fx-base,+10%);
+    -fx-table-header-border-color:derive(-fx-base,+20%);
+}
+
+.table-row-cell:filled:selected:focused, .table-row-cell:filled:selected {
+    -fx-background-color: derive(-fx-base,+60%);
+}
+
+.table-row-cell:filled:hover {
+    -fx-background-color: derive(-fx-base,+40%);
+}
+

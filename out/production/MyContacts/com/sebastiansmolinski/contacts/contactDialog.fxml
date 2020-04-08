@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="347.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/10.0.2-internal"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sebastiansmolinski.contacts.ContactController">
+       <AnchorPane layoutY="-6.0" minHeight="0.0" minWidth="0.0" prefHeight="339.0" prefWidth="400.0">
+        <children>
+            <Label layoutX="7.0" layoutY="18.0" text="Title:"/>
+            <TextField fx:id="titleField" layoutX="65.0" layoutY="15.0" prefHeight="25.0" prefWidth="130.0"/>
+            <Label layoutX="5.0" layoutY="44.0" text="First Name:"/>
+            <TextField fx:id="firstNameField" layoutX="65.0" layoutY="42.0" prefHeight="25.0" prefWidth="130.0"/>
+            <Label layoutX="5.0" layoutY="74.0" text="Last Name:"/>
+            <TextField fx:id="lastNameField" layoutX="65.0" layoutY="69.0" prefHeight="25.0" prefWidth="130.0"/>
+            <Label layoutX="5.0" layoutY="101.0" text="Company:"/>
+            <TextField fx:id="companyNameField" layoutX="65.0" layoutY="96.0" prefHeight="25.0" prefWidth="130.0"/>
+            <Label layoutX="5.0" layoutY="127.0" text="Job Title:"/>
+            <TextField fx:id="jobTitleField" layoutX="65.0" layoutY="123.0" prefHeight="25.0" prefWidth="130.0"/>
+            <Label layoutX="20.0" layoutY="173.0" text="Business Phones:"/>
+            <Label layoutX="5.0" layoutY="199.0" text="Phone:"/>
+            <TextField fx:id="phoneNumberField" layoutX="55.0" layoutY="195.0" prefWidth="330.0"/>
+            <Label layoutX="5.0" layoutY="227.0" text="Mobile:"/>
+            <TextField fx:id="mobileNumberField" layoutX="55.0" layoutY="223.0" prefHeight="25.0" prefWidth="330.0"/>
+            <Label layoutX="20.0" layoutY="257.0" text="Business Internet:"/>
+            <Label layoutX="5.0" layoutY="286.0" text="E-Mail:"/>
+            <TextField fx:id="mailField" layoutX="55.0" layoutY="282.0" prefHeight="25.0" prefWidth="330.0"/>
+            <Label layoutX="5.0" layoutY="315.0" text="Web Site:"/>
+            <TextField fx:id="webSiteField" layoutX="55.0" layoutY="311.0" prefHeight="25.0" prefWidth="330.0"/>
+            <ImageView fx:id="chooseImage" fitHeight="150.0" fitWidth="200.0" layoutX="211.0" layoutY="18.0"
+                       onMouseClicked="#loadImage" pickOnBounds="true" preserveRatio="true">
+                <Image url="@765-default-avatar.png"/>
+            </ImageView>
+        </children>
+    </AnchorPane>
+</AnchorPane>

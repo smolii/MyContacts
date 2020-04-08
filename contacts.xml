@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contacts>
+<contact>
+	<title>Ms.</title>
+	<first_name>Dominika</first_name>
+	<last_name>Adamek</last_name>
+	<company_name>Domi Corp</company_name>
+	<job_title>Logopeda</job_title>
+	<phone_number>7889754134</phone_number>
+	<mobile_number>6465456431</mobile_number>
+	<email>domi@o2.pl</email>
+	<web_site>o2.pl</web_site>
+	<photo>file:/C:/Users/smoli/IdeaProjects/MyContacts/src/com/sebastiansmolinski/contacts/1024px-Gnome-stock_person.svg.png</photo>
+</contact>
+<contact>
+	<title>Mr.</title>
+	<first_name>Sebastian</first_name>
+	<last_name>Smoliński</last_name>
+	<company_name>Smo Dev</company_name>
+	<job_title>Junior Java</job_title>
+	<phone_number>45645621</phone_number>
+	<mobile_number>21231134</mobile_number>
+	<email>smolii@o2.pl</email>
+	<web_site>o2.pl</web_site>
+	<photo>file:/C:/Users/smoli/IdeaProjects/MyContacts/src/com/sebastiansmolinski/contacts/person.jpg</photo>
+</contact>
+</contacts>

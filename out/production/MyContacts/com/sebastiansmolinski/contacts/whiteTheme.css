@@ -1,0 +1,32 @@
+root {
+    -fx-base: #d0d0d0;
+    -fx-background: #f4f4f4;
+    -fx-control-inner-background: white;
+}
+
+.menu-bar {
+
+    -fx-text-fill: black;
+}
+
+.menu-bar .menu .label {
+    -fx-padding: 0.333em 0.5em 0.333em 0.5em;
+    -fx-text-fill: black;
+}
+
+.button {
+    -fx-background-color: transparent;
+    -fx-padding: 4;
+}
+
+.button:hover {
+    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-color: -fx-hover-base;
+}
+
+.MTrimBar .tool-bar {
+    -fx-border-style: solid;
+    -fx-background-color: null;
+    -fx-border-color:  null;
+    -fx-border-width: 0px;
+}
